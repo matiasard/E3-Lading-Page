@@ -194,7 +194,8 @@ nav,
 
 	/** HERO */
 	.hero__main {
-		height: 100vh;
+		height: 100%;
+		margin-bottom: 4rem;
 	}
 	.hero__main-content {
 		grid-template-columns: 1fr;
@@ -210,5 +211,9 @@ nav,
 		width: 500px;
 		display: block;
 		margin-inline: auto;
+	}
+
+	.hero__waves {
+		bottom: -55px;
 	}
 }
