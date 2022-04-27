@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;800&display=swap");
+
+/* ----------------------- */
+/* - Custom properties     */
+/* ----------------------- */
+:root {
+	/* Font-families */
+	--font-primary: "Poppins", sans-serif;
+	--font-secondary: "Roboto", sans-serif;
+	--font-normal: sans-serif;
+
+	/* Font-sizes */
+	--fs-800: 6.25rem;
+	--fs-700: 3.5rem;
+	--fs-650: 2.5rem;
+	--fs-600: 2rem;
+	--fs-500: 1.75rem;
+	--fs-400: 1.125rem;
+	--fs-300: 1rem;
+
+	/* Colors */
+	--background-main-color: #f7f5f3;
+	--background-secondary-color: #f2f4f6;
+	--background-white: #fff;
+	--background-dark: #212121;
+	--text-dark: #272b30;
+	--text-white: #fff;
+	--text-grey: #4d4d4d;
+	--text-accent-1: #ffa000;
+	--text-accent-2: #006572;
+}
+
+/* ----------------------- */
+/* - Reset                 */
+/* ----------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset Margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+
+	/* font-family: var(--font-secondary); */
+	font-family: var(--font-primary);
+	font-size: var(--fs-400);
+	color: var(--text-dark);
+	background-color: var(--background-main-color);
+}
+
+/* ----------------------- */
+/* - Utility Classes       */
+/* ----------------------- */
+
+.container {
+	padding-inline: 2em;
+	margin-inline: auto;
+	max-width: 80rem;
+}
+
+/* Colors */
+.bg-dark {
+	background-color: var(--background-dark);
+}
+.bg-white {
+	background-color: var(--background-white);
+}
+.text-dark {
+	color: var(--text-dark);
+}
+.text-white {
+	color: var(--text-white);
+}
+.text-accent-1 {
+	color: var(--text-accent-1);
+}
+
+/* Typografia */
+.ff-primary {
+	font-family: var(--font-primary);
+}
+.ff-secondary {
+	font-family: var(--font-secondary);
+}
+.uppercase {
+	text-transform: uppercase;
+}
