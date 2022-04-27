@@ -92,23 +92,119 @@ nav,
 }
 
 /* ----------------------- */
-/** - MEDIA QUERIES        */
+/** - HERO SECTION         */
 /* ----------------------- */
-@media (max-width: 768px) {
-	.dropdown {
-		display: inline-block;
-	}
-	nav .a-link {
-		display: none !important;
-	}
+
+.hero__main {
+	background-image: linear-gradient(
+		to top,
+		#1e3c72 0%,
+		#1e3c72 1%,
+		#2a5298 100%
+	);
+
+	color: var(--text-white);
+	padding-inline: 2em;
+	height: 95vh;
+	display: grid;
+
+	grid-template-rows: 1fr;
+	position: relative;
+	/* grid-template-columns: 1fr; */
+	/* grid-template-rows: max-content 1fr; */
 }
 
-@media (min-width: 768px) {
+.hero__main-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	/* grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); */
+	grid-gap: 2em;
+	align-content: center;
+	/* align-items: center; */
+}
+
+.hero__waves {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.hero__text {
+	align-self: center;
+	justify-self: center;
+}
+
+.hero__title {
+	font-size: 2.6rem;
+	line-height: 1;
+	letter-spacing: 2px;
+	margin-bottom: 1.5rem;
+}
+
+.hero__subtitle {
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 1.5rem;
+}
+
+.hero__picture-img {
+	/* width: 100%; */
+}
+
+.hero__cta {
+	text-decoration: none;
+	color: var(--text-white);
+	padding: 15px 60px;
+	border: 1px solid;
+	border-radius: 6px;
+	display: inline-block;
+	font-weight: 700;
+	transition: background-color 0.3s;
+}
+.hero__cta:hover {
+	background-color: var(--background-white);
+	color: #2a5298;
+}
+
+/* ----------------------- */
+/** - MEDIA QUERIES        */
+/* ----------------------- */
+
+/** NAVBAR */
+@media (min-width: 801px) {
 	.dropdown {
 		display: none;
 	}
 
 	nav a {
 		display: inline-block;
+	}
+}
+
+/** Hero y Navbar */
+@media (max-width: 800px) {
+	/** NAVBAR */
+	.dropdown {
+		display: inline-block;
+	}
+	nav .a-link {
+		display: none !important;
+	}
+
+	/** HERO */
+	.hero__main-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: max-content max-content;
+		text-align: center;
+	}
+
+	.hero_picture {
+		grid-row: 1/2;
+	}
+
+	.hero__picture-img {
+		width: 500px;
+		display: block;
+		margin-inline: auto;
 	}
 }
